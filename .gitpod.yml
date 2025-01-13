@@ -1,0 +1,20 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      echo "Installing Android SDK..."
+      mkdir -p android-sdk
+      wget https://dl.google.com/android/repository/commandlinetools-linux-8092744_latest.zip
+      unzip commandlinetools-linux-8092744_latest.zip -d android-sdk
+      export ANDROID_HOME=$WORKSPACE_ROOT/android-sdk
+      export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+      yes | sdkmanager --licenses
+      sdkmanager "platform-tools" "platforms;android-30" "build-tools;30.0.3"
+    command: |
+      echo "Setup complete"
+
+vscode:
+  extensions:
+    - vscjava.vscode-java-pack
+    - fwcd.kotlin 

@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">RedNote Translator</string>
+    <string name="accessibility_service_label">RedNote Translation Service</string>
+    <string name="accessibility_service_description">This service detects and translates Chinese content from the RedNote (XiaoHongShu) app</string>
+    <string name="enable_accessibility_service">Please enable accessibility service</string>
+    <string name="enable_overlay_permission">Please allow overlay permission</string>
+</resources> 
